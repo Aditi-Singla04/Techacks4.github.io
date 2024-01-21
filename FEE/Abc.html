@@ -1,0 +1,38 @@
+<?php
+require 'vendor/autoload.php'; // Include PhpSpreadsheet library
+
+function sanitizeInput($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Get form data
+    $name = sanitizeInput($_POST["name"]);
+    $rollNumber = sanitizeInput($_POST["rollNumber"]);
+    $email = sanitizeInput($_POST["email"]);
+    $password = sanitizeInput($_POST["password"]);
+
+    $spreadsheet = new \PhpOffice\PhpSpreadsheet\Spreadsheet();
+    $sheet = $spreadsheet->getActiveSheet();
+
+    $sheet->setCellValue('A1', 'Name');
+    $sheet->setCellValue('B1', 'Roll Number');
+    $sheet->setCellValue('C1', 'Email');
+    $sheet->setCellValue('D1', 'Password');
+
+    $sheet->setCellValue('A2', $name);
+    $sheet->setCellValue('B2', $rollNumber);
+    $sheet->setCellValue('C2', $email);
+    $sheet->setCellValue('D2', $password);
+
+    // Save the spreadsheet to a file
+    $writer = new \PhpOffice\PhpSpreadsheet\Writer\Xlsx($spreadsheet);
+    $writer->save('form-data.xlsx');
+
+    header("Location: confirmation-page.html");
+    exit();
+}
+?>

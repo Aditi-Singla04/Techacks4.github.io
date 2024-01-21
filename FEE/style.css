@@ -1,0 +1,138 @@
+* {
+    text-decoration: none;
+}
+
+.navbar {
+    background-color: #050505; /* Add your desired background color */
+    padding: 10px;
+  }
+
+  .navbar .navdiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo img {
+    width: 280px; /* Set your desired width */
+    height: auto; /* Maintain the aspect ratio */
+    /* Add other styling properties as needed */
+  }
+
+  .navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px; /* Adjust the space between list items */
+  }
+
+  .navbar ul li a {
+    text-decoration: none;
+    color: white; /* Add your desired text color */
+  }
+
+  .btn-signin {
+    /* Add styling for the SignIn button */
+    background-color: #4CAF50; /* Add your desired background color */
+    color: white; /* Add your desired text color */
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+
+
+
+  
+  .contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50vh;
+    padding-left:30vh ;
+    padding-right: 40vh;
+    background-color: aliceblue;
+}
+
+.contact-form {
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.contact-form h2 {
+    text-align: center;
+    color: #333;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    background-color: #4caf50;
+    color: #fff;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #45a049;
+}
+
+.container-form {
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.container-form h3 {
+    text-align: center;
+    color: #333;
+}
+
+.container-form input,
+.container-form textarea,
+.container-form button {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.container-form textarea {
+    resize: vertical;
+}
+
+.container-form button {
+    background-color: #4caf50;
+    color: #fff;
+    cursor: pointer;
+}
+
+.container-form button:hover {
+    background-color: #45a049;
+}
